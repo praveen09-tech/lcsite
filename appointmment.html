@@ -1,0 +1,36 @@
+<html>
+
+<script src="https://lugandcarrie--devus.sandbox.my.site.com/profilesubmission/lightning/lightning.out.js"></script>
+
+<div data-lightning-out="true"></div>
+
+  <script>
+
+    const appName = 'c:GenericSchedulerApp';
+    const componentName = 'c:GenericSchedulerComponent';
+    const lightningEndpoint = 'https://lug-carrie.com';
+    const targetElement = document.querySelector("[data-lightning-out]");
+    const componentAttributes = {
+
+    };
+
+    $Lightning.use(
+            appName,
+            function (){
+              $Lightning.createComponent(
+                      componentName
+                      componentAttributes,
+                      targetElement,
+                      function (cmp){
+                        console.log('lightning component created');
+                      }
+              );
+            },
+            lightningEndpoint
+    );
+
+
+  </script>
+
+
+</html>
